@@ -1,6 +1,7 @@
 backend:
   name: github
   branch: main
+  repo: jessemedina72/jesses-plumbing-website
 
 media_folder: "uploads"
 public_folder: "/uploads"
