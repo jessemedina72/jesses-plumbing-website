@@ -626,8 +626,10 @@ img.loading = "lazy";
 
 // Click-to-enlarge
 img.style.cursor = "zoom-in";
-img.addEventListener("click", () => {
-  openLightbox(item.image, item.title || "");
+img.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  window.openLightbox(img.src, item.title || img.alt || "");
 });
 
 slide.appendChild(img);
